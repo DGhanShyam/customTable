@@ -1,0 +1,29 @@
+<div class="main-section">
+    <table>
+        <tr>
+            <td *ngFor="let item of KeyaData">
+                {{item | uppercase}}
+            </td>
+        </tr>
+
+        <tr *ngFor="let item of modelData">
+            <td >
+                <app-table-data [idData]="item.Uid">
+                </app-table-data>
+            </td>
+            <td>
+                <app-table-data [nameData]="item.name">
+                </app-table-data>
+            </td>
+            <td >
+                <app-table-data [ageData]="item.age">
+                </app-table-data>
+            </td>
+            <td >
+                <app-table-data [cityData]="item.city">
+                </app-table-data>
+            </td>
+        </tr>
+        
+    </table>
+</div>
